@@ -4,7 +4,7 @@
   "description": "Team Management System",
   "scripts": {
     "postinstall": "npm install --prefix backend && npm install --prefix frontend",
-    "build": "cd backend && npx prisma generate && cd ../frontend && npm run build",
+    "build": "cd backend && npx prisma generate && npx prisma db push && cd ../frontend && npm run build",
     "start": "node backend/server.js"
   }
 }
